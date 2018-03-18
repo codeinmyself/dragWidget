@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # demov
 
 > A Vue.js project
@@ -28,3 +29,8 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# dragWidget
+## Just begin
+## Finish later
+>>>>>>> 8bd2aefcae299e165914b66727c0ef14c1a298b6
