@@ -23,9 +23,7 @@
 </template>
 <script>
     import { mapState,mapMutations } from 'vuex';
-    //这里我将组建特有的编辑栏，写成了一个组件，为什么不写在相应的组件一起了？
-    //这里必须说明一下，主要是我没有想到方法，让他在同一组件内分离出来，单独将dom结构放在编辑栏这里，如果有大神知道
-    //还望不吝赐教
+    //组建的编辑栏，写成了一个组件
     import BtnEdit from "@/components/BtnEdit.vue";
     import TextCpEdit from "@/components/TextCpEdit.vue";
     export default{
