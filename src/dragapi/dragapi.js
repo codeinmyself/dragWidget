@@ -30,4 +30,6 @@ const dragApi = {
   ]
 }
 
-export default dragApi;
+
+export default dragApi
+  

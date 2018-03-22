@@ -1,7 +1,7 @@
 <template>
     <!--用的element-ui-->
-    <el-container>
-        <el-aside>
+    <el-container class="mainWrap">
+        <el-aside class="app-left">
             <draggable class="app-aside-drag" :options="dragOption" @end="onEnd">
                 <div class="app-aside-list" v-for="(dragList,index) in dragData"  :type="dragList.type" :key="dragList.type">
                     <div class="aside-item-body">
@@ -11,7 +11,7 @@
                 </div>
             </draggable>
         </el-aside>
-        <el-main class="app-main">
+        <div class="app-main">
                 <section class="app-phone">
                     <div class="app-phone-header">
                         <span class="phone-camera"></span>
@@ -23,7 +23,11 @@
                         <button class="app-phone-menu">RS</button>
                     </div>
                 </section>
-        </el-main>
+        </div>
+        <el-aside class="app-right">
+            <!--组件编辑区域-->
+            <BaseEdit></BaseEdit>
+        </el-aside>
     </el-container>
     
 </template>
@@ -31,7 +35,7 @@
 import DragApi from "@/dragapi/dragapi.js";
 import Draggable from "vuedraggable";
 import Sort from "@/view/Sort";
-// import BaseEdit from "@/view/BaseEdit";
+import BaseEdit from "@/view/BaseEdit";
 export default {
   name: 'App',
   data(){
@@ -49,7 +53,8 @@ export default {
 	},
 	components: {
 	    Draggable,
-	    Sort
+	    Sort,
+      BaseEdit
 	},
   methods:{
     onEnd(res){

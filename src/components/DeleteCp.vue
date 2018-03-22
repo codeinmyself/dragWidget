@@ -48,7 +48,7 @@
                     message: '该模块已删除 !',
                     type: 'success'
                 });
-                this.setCommon({flag: false,index: 0})
+                this.setCommon({flag: false,index})
             }
         }
     }

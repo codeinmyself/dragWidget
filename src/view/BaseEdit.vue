@@ -3,23 +3,12 @@
         <div v-if="sortApi.length > 0 && editShow === true">
             <el-tabs v-model="activeName">
                 <el-tab-pane label="组件设置" name="first">
-                    <div v-for="(appUi,index) in sortApi" :is="appUi.component+'Edit'" :content="appUi.content" :oStyle="appUi.style" :editPartShow="appUi.editPartShow" :aIndex="index" :currentIndex="editIndex" :key="appUi.content.code">
+                    <div v-for="(appUi,index) in sortApi" :is="appUi.component+'Edit'" :styleShow="false"  :content="appUi.content" :oStyle="appUi.style" :editPartShow="index == editIndex" :aIndex="index" :currentIndex="editIndex" :key="appUi.content.code">
                     </div>
                 </el-tab-pane>
                 <el-tab-pane label="样式设置" name="second">
-                    <el-collapse v-model="colorPicker.name" class="base-edit"  accordion>
-                        <el-collapse-item class="tititt" :title="colorPicker.type" :name="colorPicker.type">
-                            <el-form ref="form" :model="colorPicker" size="mini">
-                                <el-form-item class="cui-inline-reset" v-for="(item,index) in colorPicker.content" :label="item.title" :key="item.style">
-                                    <el-color-picker @active-change=" (value) => setStyle(value,item.style)" v-model="sortApi[editIndex].style[item.style]" show-alpha>
-                                    </el-color-picker>
-                                    <span class="black-text-shadow" :style="{color: sortApi[editIndex].style[item.style]}">
-                                        {{ sortApi[editIndex].style[item.style] }}
-                                    </span>
-                                </el-form-item>
-                            </el-form>
-                        </el-collapse-item>
-                    </el-collapse>
+                  <div v-for="(appUi,index) in sortApi" :is="appUi.component+'Edit'" :styleShow="true" :content="appUi.content" :oStyle="appUi.style" :editPartShow="index == editIndex" :aIndex="index" :currentIndex="editIndex" :key="appUi.content.code">
+                  </div>
                 </el-tab-pane>
             </el-tabs>
         </div>
