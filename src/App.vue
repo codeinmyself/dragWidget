@@ -4,7 +4,7 @@
         <el-aside class="app-left">
           <el-card class="box-card">
             <div slot="header" class="clearfix">
-              <span>卡片名称</span>
+              <span>组件</span>
             </div>
             <draggable class="app-aside-drag" :options="dragOption" @end="onEnd">
                 <div class="app-aside-list" v-for="(dragList,index) in dragData"  :type="dragList.type" :key="dragList.type">
@@ -15,8 +15,6 @@
                 </div>
             </draggable>
           </el-card>
-            
-            
         </el-aside>
         <div class="app-main">
                 <section class="app-phone">

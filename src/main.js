@@ -15,7 +15,7 @@ Vue.use(ElementUI);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  store,
+  store,//vuex数据
   template: '<App/>',
   components: { App }
 })
