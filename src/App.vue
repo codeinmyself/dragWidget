@@ -2,12 +2,14 @@
     <!--用的element-ui-->
     <el-container class="mainWrap">
         <el-aside class="app-left">
+          <!--左侧数据栏 -->
           <el-card class="box-card">
             <div slot="header" class="clearfix">
               <span>组件</span>
             </div>
             <draggable class="app-aside-drag" :options="dragOption" @end="onEnd">
-                <div class="app-aside-list" v-for="(dragList,index) in dragData"  :type="dragList.type" :key="dragList.type">
+                <div class="app-aside-list" v-for="(dragList,index) in dragData"  
+                :type="dragList.type" :key="dragList.type">
                     <div class="aside-item-body">
                         <i class="aside-item-ele"></i>
                         <span class="aside-item-ele">{{ dragList.title }}</span>
@@ -34,7 +36,6 @@
             <BaseEdit></BaseEdit>
         </el-aside>
     </el-container>
-    
 </template>
 <script>
 import DragApi from "@/dragapi/dragapi.js";

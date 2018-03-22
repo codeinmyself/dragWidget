@@ -2,7 +2,11 @@
     <draggable :options="sortOption" @sort="onSort" @add="onAdd" class="app-sort">
         <!-- ui组件 -->
         <!--这里不懂的人，可以去vue官网看看动态组件-->
-        <div class="widgetBorder" v-bind:class="{ active: index == editIndex }" v-for="(appUi,index) in sortApi" :is="appUi.component" :content="appUi.content" :oStyle="appUi.style" :editPartShow="appUi.editPartShow" :aIndex="index" @click.native="getIndex(index)" :key="appUi.content.code">
+        <div class="widgetBorder" v-bind:class="{ active: index == editIndex }" 
+        v-for="(appUi,index) in sortApi" 
+        :is="appUi.component" :content="appUi.content" :oStyle="appUi.style" 
+        :editPartShow="appUi.editPartShow" :aIndex="index" 
+        @click.native="getIndex(index)" :key="appUi.content.code">
         </div>
     </draggable>
 </template>

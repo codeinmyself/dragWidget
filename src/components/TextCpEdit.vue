@@ -6,19 +6,21 @@
           </el-form-item>
         </el-form>
         <el-form ref="form" :model="colorPicker" size="mini" v-else>
-            <el-form-item class="cui-inline-reset" v-for="(item,index) in colorPicker.content" :label="item.title" :key="item.style">
-                <el-color-picker @active-change=" (value) => setStyle(value,item.style)" v-model="oStyle[item.style]" show-alpha>
+            <el-form-item class="cui-inline-reset" v-for="(item,index) in colorPicker.content" 
+            :label="item.title" :key="item.style">
+                <el-color-picker @active-change=" (value) => setStyle(value,item.style)" 
+                  v-model="oStyle[item.style]" show-alpha>
                 </el-color-picker>
                 <span class="black-text-shadow" :style="{color: oStyle[item.style]}">
                 </span>
             </el-form-item>
             <el-form-item label="文字大小" >
-              <el-input placeholder="" v-model="oStyle.fontSize" max="48" min="12" type="number"></el-input>px
+              <el-input placeholder="" v-model="oStyle.fontSize" max="48" min="12" type="number">
+              </el-input>px
             </el-form-item>
         </el-form>
     </div>
 </template>
-
 <script type="text/javascript">
   export default{
     name: 'TextCpEdit',

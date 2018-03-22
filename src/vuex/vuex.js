@@ -3,7 +3,6 @@ import Vuex from "vuex";
 import ComponentsData from "@/componentsData/componentsData.js";
 Vue.use(Vuex);
 
-
 let sortApi = [];
 let localData = JSON.parse(window.sessionStorage.getItem("localData"));
 
@@ -39,7 +38,6 @@ if(localData !== null){
     }
   ]
 }
-
 
 const store = new Vuex.Store({
   state:{

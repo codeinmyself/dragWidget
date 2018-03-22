@@ -2,11 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App';
-import Axios from "axios";
-import ElementUI from "element-ui";
+import Axios from "axios";//网络交互 暂时没用到
+import ElementUI from "element-ui";//ui库
 import 'element-ui/lib/theme-chalk/index.css';
 import "@/style/common.css"
-import store from "@/vuex/vuex.js"
+import store from "@/vuex/vuex.js"//vuex
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = Axios;
