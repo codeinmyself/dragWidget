@@ -16,7 +16,6 @@
     //拖拽插件引入
     import Draggable from 'vuedraggable';
     //各个组件引入
-    // import Carousel from "@/components/Carousel.vue";
     import Btn from "@/components/Btn.vue";
     import TextCp from "@/components/TextCp.vue";
 

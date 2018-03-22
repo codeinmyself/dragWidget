@@ -1,4 +1,3 @@
-
 <template>
     <div class="sortItem textcp-box ui-sortable" :data-code="content.code">
         <span class="ui-textcp"
