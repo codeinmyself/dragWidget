@@ -59,7 +59,10 @@ const store = new Vuex.Store({
     },
     addCp(state, res){
       let cloneNode = res.clone;
-      state.sortApi[state.editIndex].editPartShow = false;
+      if(0 != state.sortApi.length){
+        state.sortApi[state.editIndex].editPartShow = false;
+      }
+      
       state.editIndex = state.sortApi.length;
       let mCP = ComponentsData[cloneNode.attributes.type.value]();
       mCP.content.code = cloneNode.attributes.type.value + state.sortApi.length;
@@ -73,6 +76,7 @@ const store = new Vuex.Store({
       }
       state.sortApi.pop();
       state.editIndex = state.sortApi.length - 1;
+      
     }
   },
   actions:{}
