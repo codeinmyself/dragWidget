@@ -14,11 +14,12 @@
     //各个组件引入
     // import Carousel from "@/components/Carousel.vue";
     import Btn from "@/components/Btn.vue";
+    import TextCp from "@/components/TextCp.vue";
 
     export default {
         name: 'Sort',
         components: {
-            Draggable,Btn
+            Draggable,Btn,TextCp
         },
         data(){
             return {

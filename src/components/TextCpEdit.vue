@@ -1,7 +1,7 @@
 <template>
-    <div class="boxEdit btn-boxEdit" :data-code="content.code" v-if="editPartShow">
+    <div class="boxEdit textcp-boxEdit" :data-code="content.code" v-if="editPartShow">
         <el-form ref="form" :model="colorPicker" size="mini" v-if="!styleShow">
-          <el-form-item label="按钮文字" >
+          <el-form-item label="文字" >
             <el-input placeholder="请输入文字" v-model="content.text"></el-input>
           </el-form-item>
         </el-form>
@@ -21,7 +21,7 @@
 
 <script type="text/javascript">
   export default{
-    name: 'btnEdit',
+    name: 'TextCpEdit',
     props: { //父组件传入的参数
         content: Object,
         oStyle: Object,

@@ -19,7 +19,8 @@ if(localData !== null){
       },
       style:{
         color:"#333333",
-        background:"#409EFF"
+        background:"#409EFF",
+        fontSize:"12"
       },
       editPartShow:false
     },
@@ -31,7 +32,8 @@ if(localData !== null){
       },
       style:{
         color:"#409EFF",
-        background:"#333333"
+        background:"#333333",
+        fontSize:"12"
       },
       editPartShow:false
     }
@@ -48,9 +50,7 @@ const store = new Vuex.Store({
   },
   mutations:{
     setCommon(state,obj){
-      console.log(obj);
       if(obj.flag){
-        
         state.sortApi[state.editIndex].editPartShow = false;
         state.editIndex = obj.index;
         state.sortApi[state.editIndex].editPartShow = true;
@@ -61,8 +61,6 @@ const store = new Vuex.Store({
     },
     addCp(state, res){
       let cloneNode = res.clone;
-      console.log(cloneNode.attributes.type.value);
-      
       state.sortApi[state.editIndex].editPartShow = false;
       state.editIndex = state.sortApi.length;
       let mCP = ComponentsData[cloneNode.attributes.type.value]();
@@ -72,7 +70,6 @@ const store = new Vuex.Store({
       
     },
     deleteCp(state, index){
-      console.log(index);
       for (var i = index; i < state.sortApi.length - 1; i++) {
         state.sortApi[i] = state.sortApi[i + 1];
       }

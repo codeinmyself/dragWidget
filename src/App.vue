@@ -2,6 +2,10 @@
     <!--用的element-ui-->
     <el-container class="mainWrap">
         <el-aside class="app-left">
+          <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>卡片名称</span>
+            </div>
             <draggable class="app-aside-drag" :options="dragOption" @end="onEnd">
                 <div class="app-aside-list" v-for="(dragList,index) in dragData"  :type="dragList.type" :key="dragList.type">
                     <div class="aside-item-body">
@@ -10,6 +14,9 @@
                     </div>
                 </div>
             </draggable>
+          </el-card>
+            
+            
         </el-aside>
         <div class="app-main">
                 <section class="app-phone">

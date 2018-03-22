@@ -1,4 +1,4 @@
-
+//组件数据
 let componentsData = {
   Btn(){
     return {
@@ -9,7 +9,23 @@ let componentsData = {
       },
       style:{
         color:"#fff",
-        background:"gray"
+        background:"gray",
+        fontSize:"12"
+      },
+      editPartShow:true
+    };
+  },
+  TextCp(){
+    return {
+      component:"TextCp",
+      content:{
+        text:"文字",
+        code:"TextCp"
+      },
+      style:{
+        color:"#fff",
+        background:"gray",
+        fontSize:"12"
       },
       editPartShow:true
     };

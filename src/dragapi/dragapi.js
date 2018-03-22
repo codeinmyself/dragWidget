@@ -24,6 +24,12 @@ const dragApi = {
           dragShow:true,
           title:"按钮",
           class:"icon-btn"
+        },
+        {
+          type:"TextCp",
+          dragShow:true,
+          title:"文字",
+          class:"icon-txt"
         }
       ]
     }

@@ -1,10 +1,10 @@
 
 <template>
-    <div class="btn-box ui-sortable sortItem" :data-code="content.code">
-        <el-button class="ui-btn"
+    <div class="sortItem textcp-box ui-sortable" :data-code="content.code">
+        <span class="ui-textcp"
             :style="[oStyle, {fontSize: oStyle.fontSize + 'px' }]">
             {{ content.text }}
-        </el-button>
+        </span>
         
         <DeleteCp :aIndex="aIndex"></DeleteCp>
     </div>
@@ -13,7 +13,7 @@
 //按钮组件，
     import DeleteCp from "@/components/DeleteCp";
     export default {
-        name: 'Btn',
+        name: 'TextCp',
         props: { //父组件传入的参数
             content: Object,
             oStyle: Object,
@@ -24,7 +24,7 @@
         },
         data(){
             return{
-                btnModel: 'btn-model'
+                textCpModel: 'textcp-model'
             }
         }
     }

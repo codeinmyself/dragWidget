@@ -20,11 +20,11 @@
     //这里必须说明一下，主要是我没有想到方法，让他在同一组件内分离出来，单独将dom结构放在编辑栏这里，如果有大神知道
     //还望不吝赐教
     import BtnEdit from "@/components/BtnEdit.vue";
-    
+    import TextCpEdit from "@/components/TextCpEdit.vue";
     export default{
         name: 'BaseEdit',
         components: {
-          BtnEdit
+          BtnEdit,TextCpEdit
         },
         data(){
             return{
