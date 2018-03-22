@@ -27,7 +27,6 @@
                     <!--页面view区 -->
                     <Sort class="app-phone-body"></Sort>
                     <div class="app-phone-footer">
-                        <button class="app-phone-menu">RS</button>
                     </div>
                 </section>
         </div>
